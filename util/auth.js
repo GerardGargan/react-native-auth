@@ -24,3 +24,8 @@ export function createUser(email, password) {
 export function login(email, password) {
     return authenticate('signInWithPassword', email, password);
 }
+
+export async function getData(url) {
+    const response = await axios.get(url);
+    return response.data;
+}
